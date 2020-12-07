@@ -1,15 +1,18 @@
-import React  from 'react';
+import React, { Component }  from 'react';
 import Search from './Search'
 import BookList from './Booklist'
 
 
-export default function Books () {
-     {
-        return (
-            <>
-                <Search />
-                <BookList />
-            </>
-        )
+export default class Books extends Component {
+    render() {
+        {
+            return (
+                <>
+                    <Search />
+                    <BookList />
+                </>
+            )
+        }
     }
+     
 }

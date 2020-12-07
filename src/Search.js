@@ -1,11 +1,11 @@
 import React from 'react'
 
-export default function Search () {
+const Search = () =>{
         return (
-            <>
-            <div>
+            <div className='search-area'>
+            <form>
                 <input placeholder="Search for books"></input>
-            </div>
+            
             <button>
                 Search
             </button> 
@@ -15,6 +15,9 @@ export default function Search () {
                 <option value="free">Free</option>
                 <option value = "paid">Paid</option>
             </select>
-            </>
+            </form>
+            </div>
         )
 }
+
+export default Search;
