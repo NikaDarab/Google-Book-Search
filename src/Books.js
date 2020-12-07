@@ -8,7 +8,6 @@ export default class Books extends Component {
     this.state = {
       books: [],
       searchField: "",
-      isLoaded: false,
       err: null
     };
   }
@@ -19,6 +18,9 @@ handleSubmit=(e)=> {
     fetch(url)
     .then(res => res.json())
     .then((data) => {
+        this.setState({
+            books : [...data.body.items]
+        })
         console.log(data)
     })
 }
@@ -29,9 +31,12 @@ handleSearch = (e) => {
 } 
 
   render() {
+      console.log(this.state)
       return (
         <>
-          <Search handleSubmit={this.handleSubmit} handleSearch={this.handleSearch}/>
+          <Search
+           handleSubmit={this.handleSubmit} 
+           handleSearch={this.handleSearch}/>
           <BookList />
         </>
       );

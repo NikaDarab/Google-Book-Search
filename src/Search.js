@@ -3,8 +3,8 @@ import React from 'react'
 const Search = (props) =>{
         return (
             <div className='search-area'>
-            <form onSubmit={props.submit}>
-                <input onChange={props.handleSearch} placeholder="Search for books"></input>
+            <form onSubmit={props.handleSubmit}>
+                <input type='text'onChange={props.handleSearch} placeholder="Search for books"></input>
             
             <button>
                 Search
