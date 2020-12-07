@@ -18,10 +18,11 @@ handleSubmit=(e)=> {
     fetch(url)
     .then(res => res.json())
     .then((data) => {
-        this.setState({
-            books : [...data.body.items]
-        })
         console.log(data)
+        this.setState({
+            books : [...data.items]
+        })
+        
     })
 }
 handleSearch = (e) => {
@@ -37,7 +38,7 @@ handleSearch = (e) => {
           <Search
            handleSubmit={this.handleSubmit} 
            handleSearch={this.handleSearch}/>
-          <BookList />
+          <BookList books = {this.state.books}/>
         </>
       );
   }
