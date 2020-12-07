@@ -10,10 +10,13 @@ const Search = (props) =>{
                 Search
             </button> 
 
-            <select>
-                <option value="sort">all</option>
-                <option value="free">Free</option>
-                <option value = "paid">Paid</option>
+            <select defaultValue='Sort' onChange={props.handleFilter}>
+                <option disabled value="Sort">Sort</option>
+                <option value="partial">partial</option>
+                <option value = "full">full</option>
+                <option value = "free-ebooks">free-ebooks</option>
+                <option value = "paid-ebooks">paid-ebooks</option>
+                <option value = "paid-ebooks">ebooks</option>
             </select>
             </form>
             </div>
