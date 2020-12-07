@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Search = () =>{
+const Search = (props) =>{
         return (
             <div className='search-area'>
             <form>
-                <input placeholder="Search for books"></input>
+                <input onChange={props.handleSearch} placeholder="Search for books"></input>
             
             <button>
                 Search
