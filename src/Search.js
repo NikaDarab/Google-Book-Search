@@ -4,14 +4,13 @@ const Search = (props) =>{
         return (
             <div className='search-area'>
             <form onSubmit={props.handleSubmit}>
-                <input type='text'onChange={props.handleSearch} placeholder="Search for books"></input>
+                <input type='text'onChange={props.handleSearch} placeholder="Search for books" required></input>
             
             <button>
                 Search
             </button> 
 
-            <select defaultValue='Sort' onChange={props.handleFilter}>
-                <option disabled value="Sort">Sort</option>
+            <select onChange={props.handleFilter} required>
                 <option value="partial">partial</option>
                 <option value = "full">full</option>
                 <option value = "free-ebooks">free-ebooks</option>

@@ -16,6 +16,7 @@ export default function BookCard (props) {
                   <p>    Date Published:
                         {props.published}
                   </p>
+                  <a href='{props.link}'>{props.link}</a>
               </div>
             </div>
         )

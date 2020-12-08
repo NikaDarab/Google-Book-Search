@@ -12,6 +12,7 @@ export default function Booklist (props) {
                       title={book.volumeInfo.title}
                       author={book.volumeInfo.authors}
                       published={book.volumeInfo.publishedDate}
+                      link = {book.selfLink}
                       />
                   })
               }
